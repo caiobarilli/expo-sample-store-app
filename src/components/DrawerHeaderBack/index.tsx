@@ -29,7 +29,7 @@ const DrawerHeaderBack: React.FC<HeaderProps> = ({ drawerTitle }) => {
 
 const styles = StyleSheet.create({
   backContainer: {
-    backgroundColor: '#F7C910',
+    backgroundColor: '#FFFFFF',
     flexDirection: 'row',
     alignItems: 'center',
     paddingHorizontal: 15,

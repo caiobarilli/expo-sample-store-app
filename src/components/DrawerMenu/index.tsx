@@ -114,7 +114,7 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     width: '100%',
     padding: 10,
-    backgroundColor: '#F7C910',
+    backgroundColor: '#FFFFFF',
   },
   logoDrawer: {
     width: width * 0.4,
