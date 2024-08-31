@@ -1,0 +1,54 @@
+#!/bin/bash
+
+print_tree() {
+    local folder="$1"
+    local indent="${2:-}"
+
+    # Lista todos os itens (arquivos e pastas) na pasta
+    local items=("$folder"/*)
+
+    # Número total de itens na pasta
+    local num_items=${#items[@]}
+    local count=0
+
+    # Loop sobre cada item
+    for item in "${items[@]}"; do
+        ((count++))
+
+        # Verifica se este é o último item na pasta
+        if [ $count -eq $num_items ]; then
+            local new_indent="$indent    "
+            local prefix="└──"
+        else
+            local new_indent="$indent│   "
+            local prefix="├──"
+        fi
+
+        # Exibe o nome do item
+        echo "${indent}${prefix} $(basename "$item")"
+        echo "${indent}${prefix} $(basename "$item")" >> treeview.txt
+
+        # Se o item for um diretório, chama recursivamente a função
+        if [ -d "$item" ]; then
+            print_tree "$item" "$new_indent"
+        fi
+    done
+}
+
+# Verifica se o argumento foi fornecido
+if [ $# -ne 1 ]; then
+    echo "Uso: $0 <caminho_para_pasta>"
+    exit 1
+fi
+
+# Verifica se o caminho especificado é um diretório válido
+if [ ! -d "$1" ]; then
+    echo "O caminho especificado não é um diretório válido."
+    exit 1
+fi
+
+# Limpa o arquivo treeview.txt se existir
+> treeview.txt
+
+# Chama a função para imprimir a árvore
+print_tree "$1" ""

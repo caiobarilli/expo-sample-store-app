@@ -1,0 +1,29 @@
+{
+  "expo": {
+    "extra": {
+      "apiKey": "SUA_CHAVE_DE_API_AQUI"
+    },
+    "name": "Expo Store",
+    "slug": "expo-store",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./src/assets/icon.png",
+    "userInterfaceStyle": "light",
+    "splash": {
+      "image": "./src/assets/splash.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#FFFFFF"
+    },
+    "ios": {
+      "supportsTablet": true
+    },
+    "android": {
+      "adaptiveIcon": {
+        "foregroundImage": "./src/assets/adaptive-icon.png",
+        "backgroundColor": "#FFFFFF"
+
+      },
+      "package": "com.expo.store"
+    }
+  }
+}
