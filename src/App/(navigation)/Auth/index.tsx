@@ -21,13 +21,15 @@ export default function Auth() {
           <Stack.Screen
             name="Register"
             component={RegisterScreen}
-            options={{ header: () => null }}
+            options={{
+              header: () => <Nav type="back-no-title" />,
+            }}
           />
           <Stack.Screen
             name="Forgot"
             component={ForgotScreen}
             options={{
-              header: () => <Nav stack />,
+              header: () => <Nav type="back-no-title" />,
             }}
           />
         </Stack.Navigator>
