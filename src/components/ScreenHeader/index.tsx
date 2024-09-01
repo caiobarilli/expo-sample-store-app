@@ -8,7 +8,7 @@ interface HeaderProps {
   drawerTitle?: string
 }
 
-const DrawerHeaderBack: React.FC<HeaderProps> = ({ drawerTitle }) => {
+const ScreenHeader: React.FC<HeaderProps> = ({ drawerTitle }) => {
   const navigation = useNavigation<DrawerNavigationProp<ParamListBase>>()
 
   return (
@@ -46,4 +46,4 @@ const styles = StyleSheet.create({
   },
 })
 
-export default DrawerHeaderBack
+export default ScreenHeader
