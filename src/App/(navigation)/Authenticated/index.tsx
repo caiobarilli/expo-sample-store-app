@@ -1,13 +1,10 @@
-// Authenticated.tsx
 import React, { useEffect, useState } from 'react';
 import { NavigationContainer } from '@react-navigation/native';
 import { SafeAreaProvider } from 'react-native-safe-area-context';
 import * as Font from 'expo-font';
-import { useSelector } from 'react-redux';
 import DrawerNavigation from './DrawerNavigation';
 import Loading from '@/components/Loading';
 import { AntDesign, Entypo, Ionicons } from '@expo/vector-icons';
-import { RootState } from '@/redux/store';
 
 export default function Authenticated() {
   const [appIsReady, setAppIsReady] = useState(false);
