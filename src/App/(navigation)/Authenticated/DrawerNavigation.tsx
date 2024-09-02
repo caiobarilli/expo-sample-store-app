@@ -22,7 +22,7 @@ const DrawerNavigation = () => {
         drawerPosition: 'left',
         headerTintColor: 'black',
         drawerActiveTintColor: '#ff0062',
-        drawerInactiveTintColor: '#707477',
+        drawerInactiveTintColor: '#000',
         headerLeft: () => null,
       }}
     >
