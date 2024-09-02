@@ -21,7 +21,7 @@ interface HeaderProps {
   tabName?: string
 }
 
-const DrawerHeader: React.FC<HeaderProps> = ({ tabName }) => {
+const BottomTabsHeader: React.FC<HeaderProps> = ({ tabName }) => {
   const navigation = useNavigation<DrawerNavigationProp<ParamListBase>>()
 
   return (
@@ -80,4 +80,4 @@ const styles = StyleSheet.create({
   },
 })
 
-export default DrawerHeader
+export default BottomTabsHeader

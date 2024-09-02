@@ -1,6 +1,6 @@
 import React from 'react'
 
-import DrawerHeader from '@/components/DrawerHeader'
+import BottomTabsHeader from '@/components/BottomTabsHeader'
 import ScreenHeader from '@/components/ScreenHeader'
 import DrawerMenu from '@/components/DrawerMenu'
 
@@ -17,7 +17,7 @@ const Nav: React.FC<HeaderProps> = ({ type, tabName, drawerTitle, props }) => {
             case 'menu':
                 return <DrawerMenu props={props} />
             case 'header':
-                return <DrawerHeader tabName={tabName} />
+                return <BottomTabsHeader tabName={tabName} />
             case 'back':
                 return <ScreenHeader drawerTitle={drawerTitle} />
             case 'back-no-title':
