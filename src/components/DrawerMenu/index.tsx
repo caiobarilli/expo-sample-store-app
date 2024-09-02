@@ -72,7 +72,7 @@ const DrawerMenu: React.FC<HeaderProps> = ({ props }) => {
           })}
           style={styles.iconContainerDrawer}
         >
-          <Entypo name="menu" size={42} color="black" />
+          <AntDesign name="closecircleo" size={24} color="black" />
         </PlatformPressable>
       </View>
 
@@ -111,7 +111,7 @@ const styles = StyleSheet.create({
   },
   logoDrawerContainer: {
     flexDirection: 'row',
-    alignItems: 'center',
+    justifyContent: 'space-between',
     width: '100%',
     padding: 10,
     backgroundColor: '#FFFFFF',

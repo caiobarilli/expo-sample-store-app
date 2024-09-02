@@ -1,7 +1,7 @@
 import React from 'react';
 import { createDrawerNavigator } from '@react-navigation/drawer';
 import { useSelector } from 'react-redux';
-import { Ionicons, AntDesign } from '@expo/vector-icons';
+import { Ionicons, AntDesign, FontAwesome5 } from '@expo/vector-icons';
 import Nav from '@/components/Nav';
 import { getHeaderTitle } from '@react-navigation/elements';
 import BottomTabs from './BottomTabs';
@@ -31,9 +31,9 @@ const DrawerNavigation = () => {
         component={BottomTabs}
         options={{
           title,
-          drawerLabel: 'Inicio',
+          drawerLabel: 'Store',
           drawerIcon: ({ color }) => (
-            <Ionicons name="home" size={28} color={color} />
+            <FontAwesome5 name="store" size={24} color="black" />
           ),
           header: (props) => (
             <Nav type="header" tabName={title} props={props} />
@@ -41,11 +41,11 @@ const DrawerNavigation = () => {
         }}
       />
       <Drawer.Screen
-        name="Minha Conta"
+        name="Account"
         component={ProfileScreen}
         options={{
-          headerTitle: 'Minha Conta',
-          drawerLabel: 'Minha Conta',
+          headerTitle: 'Account',
+          drawerLabel: 'Account',
           drawerIcon: ({ color }) => (
             <Ionicons name="person" size={28} color={color} />
           ),
@@ -58,28 +58,11 @@ const DrawerNavigation = () => {
         }}
       />
       <Drawer.Screen
-        name="Meus Pedidos"
-        component={OrdersScreen}
-        options={{
-          headerTitle: 'Meus Pedidos',
-          drawerLabel: 'Meus Pedidos',
-          drawerIcon: ({ color }) => (
-            <AntDesign name="profile" size={28} color={color} />
-          ),
-          header: ({ route, options }) => (
-            <Nav
-              type="back"
-              drawerTitle={getHeaderTitle(options, route.name)}
-            />
-          ),
-        }}
-      />
-      <Drawer.Screen
-        name="Sobre"
+        name="About"
         component={AboutScreen}
         options={{
-          headerTitle: 'Sobre',
-          drawerLabel: 'Sobre',
+          headerTitle: 'About',
+          drawerLabel: 'About',
           drawerIcon: ({ color }) => (
             <AntDesign name="contacts" size={28} color={color} />
           ),
