@@ -1,11 +1,13 @@
 import { useFocusEffect } from '@react-navigation/native'
-import { useCallback } from 'react'
+import { useCallback, useEffect, useState } from 'react'
 import { View, Text, StyleSheet } from 'react-native'
 import { useDispatch } from 'react-redux'
 
 import { clearScreenTitle } from '@/redux/ui-slice'
+import Loading from '@/components/Loading'
 
 export default function HomeScreen() {
+  const [appIsReady, setAppIsReady] = useState(false)
   const dispatch = useDispatch()
 
   useFocusEffect(
@@ -13,6 +15,23 @@ export default function HomeScreen() {
       dispatch(clearScreenTitle())
     }, [dispatch]),
   )
+
+  useEffect(() => {
+    async function prepare() {
+      try {
+        await new Promise((resolve) => setTimeout(resolve, 2000))
+      } catch (e) {
+        console.warn(e)
+      } finally {
+        setAppIsReady(true)
+      }
+    }
+    prepare()
+  }, [])
+
+  if (!appIsReady) {
+    return <Loading backgroundColor />
+  }
 
   return (
     <View style={styles.screenContainer}>

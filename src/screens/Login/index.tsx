@@ -14,6 +14,7 @@ import {
 import * as Yup from 'yup'
 
 import { useAuth } from '@/hooks/use-auth'
+import Loading from '@/components/Loading'
 
 const validationSchema = Yup.object().shape({
   email: Yup.string()
@@ -39,7 +40,7 @@ export default function LoginScreen() {
   useEffect(() => {
     async function prepare() {
       try {
-        // await new Promise((resolve) => setTimeout(resolve, 2000))
+        await new Promise((resolve) => setTimeout(resolve, 1000))
       } catch (e) {
         console.warn(e)
       } finally {
@@ -67,7 +68,7 @@ export default function LoginScreen() {
   }, [appIsReady])
 
   if (!appIsReady) {
-    return null
+    return <Loading />
   }
 
   return (

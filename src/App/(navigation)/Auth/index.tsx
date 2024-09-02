@@ -9,6 +9,7 @@ import RegisterScreen from '@/screens/Register'
 
 export default function Auth() {
   const Stack = createNativeStackNavigator()
+
   return (
     <SafeAreaProvider>
       <NavigationContainer>

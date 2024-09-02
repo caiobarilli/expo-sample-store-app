@@ -10,6 +10,7 @@ import Auth from '@/App/(navigation)/Auth'
 import Authenticated from '@/App/(navigation)/Authenticated'
 import AuthContextProvider, { useAuth } from '@/hooks/use-auth'
 import ReduxProvider from '@/redux/provider'
+import Loading from '@/components/Loading'
 
 const Providers: React.FC<{ children: React.ReactNode }> = ({ children }) => (
   <ReduxProvider>
@@ -50,7 +51,7 @@ function App() {
   }, [loaded, error])
 
   if (!appIsReady && !loaded && !error) {
-    return null
+    return <Loading />
   }
 
   return (
