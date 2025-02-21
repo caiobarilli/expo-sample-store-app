@@ -1,7 +1,7 @@
 {
   "name": "expo-store",
   "version": "1.0.0",
-  "main": "src/App/_layout.tsx",
+  "main": "src/app/_layout.tsx",
   "scripts": {
     "start": "npx expo start",
     "start:clear": "npx expo start -c",
