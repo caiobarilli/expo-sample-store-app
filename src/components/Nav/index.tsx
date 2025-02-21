@@ -14,14 +14,14 @@ interface HeaderProps {
 const Nav: React.FC<HeaderProps> = ({ type, tabName, drawerTitle, props }) => {
   try {
     switch (type) {
-    case 'menu':
-      return <DrawerMenu props={props} />
-    case 'header':
-      return <BottomTabsHeader tabName={tabName} />
-    case 'back':
-      return <ScreenHeader drawerTitle={drawerTitle} />
-    case 'back-no-title':
-      return <ScreenHeader />
+      case 'menu':
+        return <DrawerMenu props={props} />
+      case 'header':
+        return <BottomTabsHeader tabName={tabName} />
+      case 'back':
+        return <ScreenHeader drawerTitle={drawerTitle} />
+      case 'back-no-title':
+        return <ScreenHeader />
     }
   } catch (error) {
     console.error(error)

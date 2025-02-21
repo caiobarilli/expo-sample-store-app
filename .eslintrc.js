@@ -3,7 +3,7 @@ module.exports = {
   extends: ['universe/native'],
   ignorePatterns: ['node_modules/', 'android/', 'ios/'],
   rules: {
-    indent: ['error', 2],
+    indent: ['error', 2, { SwitchCase: 1 }],
     'react-hooks/exhaustive-deps': 'warn',
     '@typescript-eslint/no-unused-vars': 'error',
     'no-console': ['error', { allow: ['warn', 'error'] }],
