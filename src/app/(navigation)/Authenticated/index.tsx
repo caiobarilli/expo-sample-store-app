@@ -1,13 +1,15 @@
-import React, { useEffect, useState } from 'react';
-import { NavigationContainer } from '@react-navigation/native';
-import { SafeAreaProvider } from 'react-native-safe-area-context';
-import * as Font from 'expo-font';
-import DrawerNavigation from './DrawerNavigation';
-import Loading from '@/components/Loading';
-import { AntDesign, Entypo, Ionicons } from '@expo/vector-icons';
+import { AntDesign, Entypo, Ionicons } from '@expo/vector-icons'
+import { NavigationContainer } from '@react-navigation/native'
+import * as Font from 'expo-font'
+import React, { useEffect, useState } from 'react'
+import { SafeAreaProvider } from 'react-native-safe-area-context'
+
+import DrawerNavigation from './DrawerNavigation'
+
+import Loading from '@/components/Loading'
 
 export default function Authenticated() {
-  const [appIsReady, setAppIsReady] = useState(false);
+  const [appIsReady, setAppIsReady] = useState(false)
 
   useEffect(() => {
     async function prepare() {
@@ -16,19 +18,19 @@ export default function Authenticated() {
           ...AntDesign.font,
           ...Entypo.font,
           ...Ionicons.font,
-        });
+        })
       } catch (e) {
-        console.warn(e);
+        console.warn(e)
       } finally {
-        setAppIsReady(true);
+        setAppIsReady(true)
       }
     }
 
-    prepare();
-  }, []);
+    prepare()
+  }, [])
 
   if (!appIsReady) {
-    return <Loading />;
+    return <Loading />
   }
 
   return (
@@ -37,5 +39,5 @@ export default function Authenticated() {
         <DrawerNavigation />
       </NavigationContainer>
     </SafeAreaProvider>
-  );
+  )
 }

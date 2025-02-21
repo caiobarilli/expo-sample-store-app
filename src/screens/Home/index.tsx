@@ -3,8 +3,8 @@ import { useCallback, useEffect, useState } from 'react'
 import { View, Text, StyleSheet } from 'react-native'
 import { useDispatch } from 'react-redux'
 
-import { clearScreenTitle } from '@/redux/ui-slice'
 import Loading from '@/components/Loading'
+import { clearScreenTitle } from '@/redux/ui-slice'
 
 export default function HomeScreen() {
   const [appIsReady, setAppIsReady] = useState(false)

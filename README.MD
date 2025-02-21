@@ -16,13 +16,6 @@ Expo CLI (npm install -g expo-cli)
 
 ### Configuração do Projeto
 
-Clone este repositório para o seu ambiente local:
-
-```bash
-git clone git@github.com:caiobarilli/expo-sample-store-app.git
-cd expo-sample-store-app
-```
-
 Instale as dependências do projeto:
 
 ```bash

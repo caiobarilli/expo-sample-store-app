@@ -13,8 +13,8 @@ import {
 } from 'react-native'
 import * as Yup from 'yup'
 
-import { useAuth } from '@/hooks/use-auth'
 import Loading from '@/components/Loading'
+import { useAuth } from '@/hooks/use-auth'
 
 const validationSchema = Yup.object().shape({
   email: Yup.string()

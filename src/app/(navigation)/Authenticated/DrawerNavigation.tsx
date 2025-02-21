@@ -1,19 +1,20 @@
-import React from 'react';
-import { createDrawerNavigator } from '@react-navigation/drawer';
-import { useSelector } from 'react-redux';
-import { Ionicons, AntDesign, FontAwesome5 } from '@expo/vector-icons';
-import Nav from '@/components/Nav';
-import { getHeaderTitle } from '@react-navigation/elements';
-import BottomTabs from './BottomTabs';
-import ProfileScreen from '@/screens/Profile';
-import OrdersScreen from '@/screens/Orders';
-import AboutScreen from '@/screens/About';
-import { RootState } from '@/redux/store';
+import { Ionicons, AntDesign, FontAwesome5 } from '@expo/vector-icons'
+import { createDrawerNavigator } from '@react-navigation/drawer'
+import { getHeaderTitle } from '@react-navigation/elements'
+import React from 'react'
+import { useSelector } from 'react-redux'
 
-const Drawer = createDrawerNavigator();
+import BottomTabs from './BottomTabs'
+
+import Nav from '@/components/Nav'
+import { RootState } from '@/redux/store'
+import AboutScreen from '@/screens/About'
+import ProfileScreen from '@/screens/Profile'
+
+const Drawer = createDrawerNavigator()
 
 const DrawerNavigation = () => {
-  const title = useSelector((state: RootState) => state.ui.screenTitle);
+  const title = useSelector((state: RootState) => state.ui.screenTitle)
 
   return (
     <Drawer.Navigator
@@ -75,7 +76,7 @@ const DrawerNavigation = () => {
         }}
       />
     </Drawer.Navigator>
-  );
-};
+  )
+}
 
-export default DrawerNavigation;
+export default DrawerNavigation

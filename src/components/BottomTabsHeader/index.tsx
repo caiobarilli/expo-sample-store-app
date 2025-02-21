@@ -7,13 +7,7 @@ import {
   useNavigation,
 } from '@react-navigation/native'
 import React from 'react'
-import {
-  View,
-  Text,
-  StyleSheet,
-  Platform,
-  Dimensions,
-} from 'react-native'
+import { View, Text, StyleSheet, Platform, Dimensions } from 'react-native'
 
 const { width } = Dimensions.get('window')
 

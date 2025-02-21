@@ -1,4 +1,4 @@
-import { AntDesign, Entypo, FontAwesome } from '@expo/vector-icons'
+import { AntDesign, FontAwesome } from '@expo/vector-icons'
 import {
   DrawerContentScrollView,
   DrawerItem,
@@ -58,7 +58,6 @@ const DrawerMenu: React.FC<HeaderProps> = ({ props }) => {
   return (
     <View style={styles.drawerContainer}>
       <View style={styles.logoDrawerContainer}>
-
         <Text>Logo</Text>
 
         <PlatformPressable
@@ -88,9 +87,7 @@ const DrawerMenu: React.FC<HeaderProps> = ({ props }) => {
           labelStyle={styles.drawerItemLabel}
           label="Youtube"
           icon={() => <AntDesign name="youtube" size={28} color="#000" />}
-          onPress={() =>
-            Linking.openURL('https://www.youtube.com/')
-          }
+          onPress={() => Linking.openURL('https://www.youtube.com/')}
         />
         <DrawerItem
           labelStyle={styles.drawerItemLabel}

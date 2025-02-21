@@ -8,9 +8,9 @@ import { useEffect, useState } from 'react'
 
 import Auth from '@/app/(navigation)/Auth'
 import Authenticated from '@/app/(navigation)/Authenticated'
+import Loading from '@/components/Loading'
 import AuthContextProvider, { useAuth } from '@/hooks/use-auth'
 import ReduxProvider from '@/redux/provider'
-import Loading from '@/components/Loading'
 
 const Providers: React.FC<{ children: React.ReactNode }> = ({ children }) => (
   <ReduxProvider>
