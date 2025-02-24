@@ -4,6 +4,7 @@ import { HelloWave } from '@/components/HelloWave';
 import ParallaxScrollView from '@/components/ParallaxScrollView';
 import { ThemedText } from '@/components/ThemedText';
 import { ThemedView } from '@/components/ThemedView';
+import { Link } from 'expo-router';
 
 export default function HomeScreen() {
     const { signOut } = useSession();
@@ -22,14 +23,8 @@ export default function HomeScreen() {
                 <HelloWave />
             </ThemedView>
 
-            <ThemedView style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
-                <ThemedText
-                    onPress={() => {
-                        signOut();
-                    }}>
-                    Sign Out
-                </ThemedText>
-            </ThemedView>
+            <Link href={{ pathname: '/explore' }}>Explore</Link>
+
         </ParallaxScrollView>
     );
 }

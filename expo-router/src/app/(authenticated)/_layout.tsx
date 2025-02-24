@@ -1,7 +1,8 @@
 import { Text } from 'react-native';
-import { Redirect, Stack } from 'expo-router';
-
+import { Redirect } from 'expo-router';
 import { useSession } from '@/hooks/useSession';
+import { Drawer } from 'expo-router/drawer';
+import { GestureHandlerRootView } from 'react-native-gesture-handler';
 
 export default function AppLayout() {
     const { session, isLoading } = useSession();
@@ -20,5 +21,24 @@ export default function AppLayout() {
     }
 
     // This layout can be deferred because it's not the root layout.
-    return <Stack />;
+    return (
+        <GestureHandlerRootView style={{ flex: 1 }}>
+            <Drawer>
+                <Drawer.Screen
+                    name="(root)"
+                    options={{
+                        drawerLabel: 'Home',
+                        title: 'overview',
+                    }}
+                />
+                <Drawer.Screen
+                    name="logout"
+                    options={{
+                        drawerLabel: 'Logout',
+                        title: 'overview',
+                    }}
+                />
+            </Drawer>
+        </GestureHandlerRootView>
+    );
 }

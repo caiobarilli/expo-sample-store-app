@@ -19,7 +19,6 @@ export default function HomeScreen() {
         <ThemedText type="title">
           Register
         </ThemedText>
-
       </ThemedView>
       <ThemedView>
         <Link href={{ pathname: '/login' }}>Back to Login</Link>
